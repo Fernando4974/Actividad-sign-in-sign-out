@@ -8,21 +8,12 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.sena.practica_de_consumo_api.presentation.user.PokemonScreen
+import com.sena.practica_de_consumo_api.screens.LoginScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun App(){
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(text = "Lista de Pokemones") }
-            )
-        }
-    ) { innerPadding ->
-        PokemonScreen(
-            modifier = Modifier.padding(innerPadding)
-        )
-    }
+    LoginScreen()
 }
 
 /**

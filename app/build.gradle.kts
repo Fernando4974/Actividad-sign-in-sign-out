@@ -5,6 +5,10 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
 
+        id("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
+
+
+
 }
 
 android {
@@ -45,6 +49,15 @@ android {
 }
 
 dependencies {
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    // ktor to api
+    implementation("io.ktor:ktor-client-core:2.3.8")
+    implementation("io.ktor:ktor-client-okhttp:2.3.8")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.8")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.8")
+
 
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.retrofit.core)
